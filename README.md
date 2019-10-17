@@ -1,7 +1,3 @@
-# Sexy Hooks README
-
-This is the README for your extension "sexy-hooks". After writing up a brief description, we recommend including the following sections.
-
 ## Features
 
 start typing sexy... and choose the hook are you looking for.
