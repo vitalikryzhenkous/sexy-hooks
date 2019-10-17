@@ -4,7 +4,7 @@
 	"description": "Make your functional components sexy with hooks",
 	"version": "1.0.0",
 	"icon": "icon.jpg",
-	"publisher": "Vitalii Ryzhenko",
+	"publisher": "VitaliiRyzhenko",
 	"engines": {
 		"vscode": "^1.39.0"
 	},
