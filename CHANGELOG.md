@@ -22,3 +22,7 @@
 ## [1.0.4]
 
 - Try to fix image preview in details
+
+## [1.0.5]
+
+- Try to fix image preview in details
