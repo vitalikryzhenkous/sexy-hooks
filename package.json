@@ -5,6 +5,10 @@
 	"version": "1.0.0",
 	"icon": "icon.jpg",
 	"publisher": "VitaliiRyzhenko",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/vitalikryzhenkous/sexy-hooks"
+	},
 	"engines": {
 		"vscode": "^1.39.0"
 	},
