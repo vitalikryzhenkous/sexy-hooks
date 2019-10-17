@@ -2,11 +2,11 @@
 
 start typing sexy... and choose the hook are you looking for.
 
-\!\[feature X\]\(images/suggestion.png\)
+[feature0](images/suggestion.png)
 
 press tab and enjoy your sexy hook with commets and link to source
 
-\!\[feature X\]\(images/suggestion-expand.png\)
+[feature1](images/suggestion-expand.png)
 
 ## Release Notes
 
