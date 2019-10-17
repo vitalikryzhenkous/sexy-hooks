@@ -5,4 +5,20 @@
 
 ## [1.0.0]
 
-- Initial release of Pick-up Hooks extension
+- Initial release of Sexy Hooks extension
+
+## [1.0.1]
+
+- Try to fix image preview in details
+
+## [1.0.2]
+
+- Try to fix image preview in details
+
+## [1.0.3]
+
+- Try to fix image preview in details
+
+## [1.0.4]
+
+- Try to fix image preview in details
