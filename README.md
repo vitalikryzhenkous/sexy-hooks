@@ -12,8 +12,6 @@ press tab and enjoy your sexy hook with commets and link to source
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 1.0.1
 
-Initial release of Sexy Hooks
-
-Added React Hooks Extension, and List of Customs Hooks
+Fix image preview in readme.md
