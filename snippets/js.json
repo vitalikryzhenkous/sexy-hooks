@@ -1,25 +1,30 @@
 {
-	"useState": {
+	"sexyState": {
 		"prefix": "sexyState",
 		"body": [
-			"$3import { useState } from 'react';",
-			"$4/*",
-			"* => Returns a value with a state and a function to update it",
-			"* => During subsequent re-renderings, the first value returned by useState will always be the most recent state after applying updates",
-			"* => useState does not merge update objects automatically,",
-			"* => Object.assign or return {...prevState, ...updatedValues};",
-			"* => Another option is useReducer, which is more suitable for managing state objects containing multiple values.",
-			"* => source: https://en.reactjs.org/docs/hooks-reference.html#usestate",
-			"*/",
-			"const [${1:state}, set${1:state}] = useState(${2:state});"
+			"$0import React, { useState, Fragment } from 'react';",
+			"$1/*",
+			" * => Returns a value with a state and a function to update it",
+			" * => During subsequent re-renderings, the first value returned by useState will always be the most recent state after applying updates",
+			" * => useState does not merge update objects automatically,",
+			" * => Object.assign or return {...prevState, ...updatedValues};",
+			" * => Another option is useReducer, which is more suitable for managing state objects containing multiple values.",
+			" * => source: https://en.reactjs.org/docs/hooks-reference.html#usestate",
+			" */",
+			"function ${2:RootFunctionComponent}(${3:props}) {",
+			"  const [${4:state}, set$5State] = useState(${6:initialState});",
+			"  return <Fragment>${7:content}</Fragment>;",
+			"}",
+			"",
+			"export default RootFunctionComponent;"
 		],
-		"description": "useState"
+		"description": "sexyState"
 	},
-	"useEffect": {
+	"sexyEffect": {
 		"prefix": "sexyEffect",
 		"body": [
-			"$3import { useEffect } from 'react';",
-			"$4/*",
+			"$0import { useEffect } from 'react';",
+			"$1/*",
 			"* => Delayed until the browser renders",
 			"* => Run after each completed render",
 			"* => It is guaranteed to work before any new renders",
@@ -27,21 +32,21 @@
 			"* => source: https://en.reactjs.org/docs/hooks-reference.html#useeffect",
 			"*/",
 			"useEffect(() => {  ",
-			"    const ${1:_subs} = ${2:props}.subscribe();",
+			"    const ${2:_subs} = ${3:props}.subscribe();",
 			"    // Clear subscribe",
-			"    return () => ${1:_subs}.unsubscribe();",
-			"}, [${5:}]);",
+			"    return () => ${2:_subs}.unsubscribe();",
+			"}, [${4:}]);",
 			""
 		],
-		"description": "useEffect"
+		"description": "sexyEffect"
 	},
-	"useContext": {
+	"sexyContext": {
 		"prefix": "sexyContext",
 		"body": [
-			"$3import { useContext} from \"react\";",
+			"$0import { useContext} from \"react\";",
 			"import ${1:MyContext} from './context/${1:MyContext}';",
 			"",
-			"$4/*",
+			"$2/*",
 			"* => The current context value is determined by prop,",
 			"* => value of the nearest <MyContext.Provider> above the caller in the tree.",
 			"* => Remember, the argument for useContext must be the context object itself:",
@@ -52,17 +57,17 @@
 			"* => If re-rendering a component is expensive, you can optimize it by memorizing",
 			"* => source: https://en.reactjs.org/docs/hooks-reference.html#usecontext",
 			"*/",
-			"const ${0:_context} = useContext(${1:MyContext});"
+			"const ${3:_context} = useContext(${4:MyContext});"
 		],
-		"description": "useContext"
+		"description": "sexyContext"
 	},
 
-	"useReducer": {
+	"sexyReducer": {
 		"prefix": "sexyReducer",
 		"body": [
-			"$3import { useReducer } from \"react\";",
+			"$0import { useReducer } from \"react\";",
 			"",
-			"$4/*",
+			"$1/*",
 			"* => The useReducer hook is usually preferable to useState when you have complex state logic",
 			"* => that includes multiple values, or when the next state depends on the previous one.",
 			"* => useReducer also allows you to optimize the performance of components that trigger deep updates, ",
@@ -76,7 +81,7 @@
 			"",
 			"*/",
 			"",
-			"const ${0:initialState} = {${1:count}: 0};",
+			"const ${2:initialState} = {${3:count}: 0};",
 			"function reducer(state, action) {",
 			"  switch (action.type) {",
 			"    case 'increment':",
@@ -87,7 +92,7 @@
 			"      throw new Error();",
 			"  }",
 			"}",
-			"function ${2:Counter}() {",
+			"function ${4:Counter}() {",
 			"  const [state, dispatch] = useReducer(reducer, ${0:initialState});",
 			"  return (",
 			"    <>",
@@ -98,14 +103,14 @@
 			"  );",
 			"}"
 		],
-		"description": "useReducer"
+		"description": "sexyReducer"
 	},
-	"useLazyReducer": {
+	"sexyLazyReducer": {
 		"prefix": "sexyLazyReducer",
 		"body": [
-			"$1import { useReducer } from \"react\";",
+			"$0import { useReducer } from \"react\";",
 			"",
-			"$2/*",
+			"$1/*",
 			"* => Lazy initialization",
 			"* => You can also create an initial state lazily. To do this,",
 			"* => you can pass the init function as the third argument.",
@@ -115,11 +120,11 @@
 			"* => source: https://en.reactjs.org/docs/hooks-reference.html#useReducer",
 			"*/",
 			"",
-			"$3function init(initialCount) {",
+			"$2function init(initialCount) {",
 			"  return {count: initialCount};",
 			"}",
 			"",
-			"$4function reducer(state, action) {",
+			"$3function reducer(state, action) {",
 			"  switch (action.type) {",
 			"    case 'increment':",
 			"      return {count: state.count + 1};",
@@ -132,7 +137,7 @@
 			"  }",
 			"}",
 			"",
-			"$5function Counter({initialCount}) {",
+			"$4function Counter({initialCount}) {",
 			"  const [state, dispatch] = useReducer(reducer, initialCount, init);",
 			"  return (",
 			"    <>",
@@ -149,9 +154,9 @@
 			"}",
 			""
 		],
-		"description": "useLazyReducer"
+		"description": "sexyLazyReducer"
 	},
-	"useCallback": {
+	"sexyCallback": {
 		"prefix": "sexyCallback",
 		"body": [
 			"$0import { useCallback } from 'react';",
@@ -175,9 +180,9 @@
 			"  [${4:a}, ${5:b}],",
 			");"
 		],
-		"description": "useCallback"
+		"description": "sexyCallback"
 	},
-	"useMemo": {
+	"sexyMemo": {
 		"prefix": "sexyMemo",
 		"body": [
 			"$0import { useMemo } from 'react';",
@@ -199,9 +204,9 @@
 			"*/",
 			"const ${2:memorizedValue} = useMemo(() => ${3:computeExpensiveValue}(${4:a}, ${5:b}), [${4:a}, ${5:b}]);"
 		],
-		"description": "useMemo"
+		"description": "sexyMemo"
 	},
-	"useRef": {
+	"sexyRef": {
 		"prefix": "sexyRef",
 		"body": [
 			"$0import { useRef } from 'react';",
@@ -232,9 +237,9 @@
 			"  );",
 			"}"
 		],
-		"description": "useRef"
+		"description": "sexyRef"
 	},
-	"useImperativeHandle": {
+	"sexyImperativeHandle": {
 		"prefix": "sexyImperativeHandle",
 		"body": [
 			"$0import { forwardRef, useRef, useImperativeHandle } from 'react';",
@@ -257,9 +262,9 @@
 			"}",
 			"FancyInput = forwardRef(FancyInput);"
 		],
-		"description": "useImperativeHandle"
+		"description": "sexyImperativeHandle"
 	},
-	"useLayoutEffect": {
+	"sexyLayoutEffect": {
 		"prefix": "sexyLayoutEffect",
 		"body": [
 			"$0import { useLayoutEffect } from 'react';",
@@ -280,9 +285,9 @@
 			"",
 			"*/"
 		],
-		"description": "useLayoutEffect"
+		"description": "sexyLayoutEffect"
 	},
-	"useDebugValue": {
+	"sexyDebugValue": {
 		"prefix": "sexyDebugValue",
 		"body": [
 			"$0import { useDebugValue } from 'react';",
@@ -307,9 +312,9 @@
 			"  return isOnline;",
 			"}"
 		],
-		"description": "useDebugValue"
+		"description": "sexyDebugValue"
 	},
-	"useInputValue": {
+	"sexyInputValue": {
 		"prefix": "sexyInputValue",
 		"body": [
 			"$0import { useState } from \"react\";",
@@ -334,9 +339,9 @@
 			"<input type=\"password\" placeholder=\"Password\" {...password} />",
 			"*/"
 		],
-		"description": "useInputValue"
+		"description": "sexyInputValue"
 	},
-	"useToggle": {
+	"sexyToggle": {
 		"prefix": "sexyToggle",
 		"body": [
 			"$0import { useState, useCallback } from \"react\";",
@@ -352,9 +357,9 @@
 			"<Button onClick={toggle}>Refine search</Button>",
 			"*/"
 		],
-		"description": "useToggle"
+		"description": "sexyToggle"
 	},
-	"useCustoms": {
+	"sexyCustomsInfo": {
 		"prefix": "sexyCustomsInfo",
 		"body": [
 			"/*",
@@ -395,6 +400,6 @@
 			"* source: https://www.npmjs.com/package/react-use",
 			"*/"
 		],
-		"description": "useCustoms"
+		"description": "sexyCustomsInfo"
 	}
 }

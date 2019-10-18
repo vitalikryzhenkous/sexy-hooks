@@ -2,7 +2,7 @@
 	"name": "sexy-hooks",
 	"displayName": "Sexy Hooks",
 	"description": "Make your functional components sexy with hooks",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"icon": "icon.jpg",
 	"publisher": "VitaliiRyzhenko",
 	"repository": {
@@ -30,6 +30,125 @@
 			{
 				"language": "javascript",
 				"path": "./snippets/js.json"
+			}
+		],
+		"keybindings": [
+			{
+				"key": "ctrl+alt+s",
+				"mac": "shift+cmd+s",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyState"
+				}
+			},
+			{
+				"key": "ctrl+alt+e",
+				"mac": "shift+cmd+e",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyEffect"
+				}
+			},
+			{
+				"key": "ctrl+alt+c",
+				"mac": "shift+cmd+c",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyContext"
+				}
+			},
+			{
+				"key": "ctrl+alt+r",
+				"mac": "shift+cmd+r",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyReducer"
+				}
+			},
+			{
+				"key": "ctrl+alt+b",
+				"mac": "shift+cmd+b",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyCallback"
+				}
+			},
+			{
+				"key": "ctrl+alt+m",
+				"mac": "shift+cmd+m",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyMemo"
+				}
+			},
+			{
+				"key": "ctrl+alt+f",
+				"mac": "shift+cmd+f",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyRef"
+				}
+			},
+			{
+				"key": "ctrl+alt+h",
+				"mac": "shift+cmd+h",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyImperativeHandle"
+				}
+			},
+			{
+				"key": "ctrl+alt+l",
+				"mac": "shift+cmd+l",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyLayoutEffect"
+				}
+			},
+			{
+				"key": "ctrl+alt+d",
+				"mac": "shift+cmd+d",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyDebugValue"
+				}
+			},
+			{
+				"key": "ctrl+alt+i",
+				"mac": "shift+cmd+i",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyInputValue"
+				}
+			},
+			{
+				"key": "ctrl+alt+t",
+				"mac": "shift+cmd+t",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyToggle"
+				}
+			},
+			{
+				"key": "ctrl+alt+c+i",
+				"mac": "shift+cmd+c+i",
+				"command": "editor.action.insertSnippet",
+				"when": "editorTextFocus",
+				"args": {
+					"name": "sexyCustomsInfo"
+				}
 			}
 		]
 	},

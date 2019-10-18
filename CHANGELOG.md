@@ -25,4 +25,8 @@
 
 ## [1.0.5]
 
-- Try to fix image preview in details
+- fix image preview in details
+
+## [1.0.6]
+
+- Try to add shortcuts for sexy hooks
